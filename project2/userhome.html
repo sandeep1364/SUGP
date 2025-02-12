@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
+    <link rel="stylesheet" href="userhome.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SUGPS</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Register Complaint</a></li>
+                <li><a href="#">Check Status</a></li>
+                <li><a href="#">Schemes</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact Admin</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <input type="text" placeholder="Search...">
+            <span class="profile-icon">User</span>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1>Welcome back!!!</h1>
+            <div class="quick-links">
+                <button onclick="showRegisterComplaint()">Register a Complaint</button>
+                <button onclick="showCheckStatus()">Check Status</button>
+            </div>
+        </section>
+        <div class="content-wrapper">
+            <aside>
+                <div class="sidebar">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Register Complaint</a></li>
+                        <li><a href="#">Check Status</a></li>
+                        <li><a href="#">Government Schemes</a></li>
+                    </ul>
+                    <h2>Notifications</h2>
+                    <ul>
+                        <li>No new notifications</li>
+                    </ul>
+                    <h2>Help & Support</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="main-content">
+                <div id="register-complaint">
+                    <h2>Register Complaint</h2>
+                    <form>
+                        <label for="complaint">Complaint:</label>
+                        <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="check-status" style="display:none;">
+                    <h2>Check Complaint Status</h2>
+                    <form>
+                        <label for="complaint-id">Complaint ID:</label>
+                        <input type="text" id="complaint-id" name="complaint-id">
+                        <button type="submit">Check Status</button>
+                    </form>
+                </div>
+                <div id="schemes">
+                    <h2>Government Schemes</h2>
+                    <p>Information on various government schemes available...</p>
+                </div>
+                <div id="profile">
+                    <h2>User Profile</h2>
+                    <p>Profile details with an option to edit...</p>
+                </div>
+                <div id="admin-contact">
+                    <h2>Contact Admin</h2>
+                    <p>Phone: 123-456-7890</p>
+                    <p>Email: admin@example.com</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+            
+        </div>
+        
+    </footer>
+    <script src="userhome.js"></script>
+</body>
+</html>

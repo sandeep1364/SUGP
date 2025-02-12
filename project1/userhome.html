@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
+    <link rel="stylesheet" href="userhome.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SUGPS</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('register-complaint')">Register Complaint</a></li>
+                <li><a href="#" onclick="showSection('check-status')">Check Status</a></li>
+                <li><a href="#" onclick="showSection('schemes')">Schemes</a></li>
+                <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+                <li><a href="#" onclick="showSection('admin-contact')">Contact Admin</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile" onclick="toggleDropdown()">
+            <input type="text" placeholder="Search...">
+            <span class="profile-icon">User</span>
+            <div id="user-dropdown" class="dropdown-content">
+                <a href="#" onclick="showSection('profile')">Profile</a>
+                <a href="#">Switch Account</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Welcome back!!!</h1>
+            <div class="quick-links">
+                <button onclick="showSection('register-complaint')">Register a Complaint</button>
+                <button onclick="showSection('check-status')">Check Status</button>
+            </div>
+        </section>
+        <div class="content-wrapper">
+            <aside>
+                <div class="sidebar">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#" onclick="showSection('register-complaint')">Register Complaint</a></li>
+                        <li><a href="#" onclick="showSection('check-status')">Check Status</a></li>
+                        <li><a href="#" onclick="showSection('schemes')">Government Schemes</a></li>
+                    </ul>
+                    <h2>Notifications</h2>
+                    <ul>
+                        <li>No new notifications</li>
+                    </ul>
+                    <h2>Help & Support</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="main-content">
+                <div id="register-complaint" class="content-section" style="display:none;">
+                    <h2>Register Complaint</h2>
+                    <form>
+                        <label for="complaint">Complaint:</label>
+                        <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="check-status" class="content-section" style="display:none;">
+                    <h2>Check Complaint Status</h2>
+                    <form>
+                        <label for="complaint-id">Complaint ID:</label>
+                        <input type="text" id="complaint-id" name="complaint-id">
+                        <button type="submit">Check Status</button>
+                    </form>
+                </div>
+                <div id="schemes" class="content-section" style="display:none;">
+                    <h2>Schemes</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sl. No.</th>
+                                <th>Title</th>
+                                <th>Website URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PRADHAN MANTRI AWAS YOJANA- GRAMIN - PMAY (G)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pradhan Mantri Gram Sadak Yojana (PMGSY)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)</td>
+                                <td><a href="#">Link</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Mission Antyodaya</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>National Social Assistance Programme (NSAP)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Saansad Adarsh Gram Yojana (SAGY)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Aajeevika - National Rural Livelihoods Mission (NRLM)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>SHYAMA PRASAD MUKHERJI RURBAN MISSION (SPMRM)</td>
+                                <td><a href="#">Link</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="profile" class="content-section" style="display:none;">
+                    <h2>User Profile</h2>
+                    <p>Profile details with an option to edit...</p>
+                    <div class="profile-view">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Phone:</strong> 123-456-7890</p>
+                        <button onclick="editProfile()">Edit Profile</button>
+                    </div>
+                    <div class="profile-edit" style="display:none;">
+                        <form id="profile-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="John Doe">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="john.doe@example.com">
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" name="phone" value="123-456-7890">
+                            <button type="submit">Save</button>
+                            <button type="button" onclick="cancelEdit()">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="admin-contact" class="content-section" style="display:none;">
+                    <h2>Contact Admin</h2>
+                    <p>Phone: **********</p>
+                    <p>Email: sugp@gmail.com</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+    <script src="userhome.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Gram Panchayat System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="con">
+            <div class="icon">
+                <h1 class="logo">SUGMS</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-image" id="home">
+        <img src="c1.png" alt="Background Image">
+        <div class="overlay">
+            <div class="home-content" >
+                <h1>Smart Gram Panchayat System</h1>
+                <p>
+                    The concept of a smart gram panchayat system involves using technology to enhance 
+                    the functioning of village councils. Our Smart Union Gram Panchayat Software Project 
+                    aims to revolutionize rural governance through digital solutions. Key objectives include 
+                    implementing a comprehensive digital platform for efficient administration and citizen 
+                    services, enhancing transparency and accountability in governance processes, promoting 
+                    community engagement and participation, facilitating data-driven decision-making, streamlining 
+                    resource management, improving service delivery in areas like education, healthcare, and 
+                    agriculture, and fostering sustainable development practices. Through this project, we seek to 
+                    empower Gram Panchayats, promote inclusive growth, and enhance the overall quality of life in 
+                    rural communities. The project is about bringing the benefits of digital advancements to every 
+                    corner of society.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <section class="hero">
+            <div class="container">
+                <div class="heading">
+                    <h1></h1>
+                </div>
+                <div class="hero-content">
+                    <h1>About Us</h1>
+                    <p>
+                        The concept of a smart gram panchayat system involves using technology to enhance 
+                        the functioning of village councils. Our Smart Union Gram Panchayat Software Project 
+                        aims to revolutionize rural governance and seek to empower Gram Panchayats.
+                    </p>  
+                </div>
+                <div class="hero-image">
+                    <img src="c3.jpg" alt="Hero Image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="contact-details">
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Address</strong><br>4671 Sugar Camp Road, Owatonna, Minnesota, 55060</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Phone</strong><br>507-475-6094</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email</strong><br>wrub7d7810e@temporary-mail.net</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Send Message</h2>
+                <form action="#">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" rows="5" placeholder="Type your Message..." required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Queries???",
+          "botConversationDescription": "Ask any queries",
+          "botId": "3e2fca52-0569-4db7-a6d1-5e00cbc09744",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "3e2fca52-0569-4db7-a6d1-5e00cbc09744",
+          "webhookId": "6a96ace6-0205-4546-8f4a-4281c6c68c75",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "ASSISTANT",
+          "avatarUrl": "https://ouch-cdn2.icons8.com/4V5SOlEtebzC-Ezlf3eqQt4n960VUs_DzLHhJ7sknLo/rs:fit:368:372/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMzkz/LzFjYTE1NDE3LTYz/ZDAtNDMyOC1hZTFl/LTY2OTg2M2EzNGE3/ZS5zdmc.png",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/ba6fb6c7-d675-4ad5-a096-6492809ee022/v3493/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb",
+          "allowedOrigins": []
+      });
+    </script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
